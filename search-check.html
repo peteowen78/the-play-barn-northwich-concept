@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>The Playbarn: can people find you online? (website check)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --page:#F4F6F3; --card:#FFFFFF; --ink:#17201B; --soft:#55615A; --line:#DCE2DD;
+    --good:#1F6B45; --good-bg:#E3F0E8; --fix:#B4381B; --fix-bg:#F8E6E0; --r:10px;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--page);color:var(--ink);font:400 18px/1.6 "Schibsted Grotesk",system-ui,sans-serif}
+  a{color:inherit}
+  .wrap{max-width:860px;margin:0 auto;padding:0 24px}
+  .bar{background:var(--ink);color:#fff;font-size:14px;padding:10px 0}
+  .bar .wrap{display:flex;gap:8px 24px;flex-wrap:wrap;justify-content:space-between}
+  header{padding:64px 0 40px}
+  h1{font-size:clamp(34px,6vw,58px);line-height:1.05;letter-spacing:-.025em;font-weight:800;margin:0 0 20px;max-width:15ch}
+  .lede{font-size:21px;color:var(--soft);max-width:56ch;margin:0}
+  .score{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px 32px;margin:8px 0 56px}
+  .score b{font-size:76px;line-height:1;font-weight:800;letter-spacing:-.04em}
+  .score b span{color:var(--soft);font-size:34px;letter-spacing:0}
+  .score p{margin:0;max-width:44ch}
+  h2{font-size:30px;line-height:1.15;letter-spacing:-.015em;margin:0 0 8px}
+  .sub{color:var(--soft);margin:0 0 28px;max-width:60ch}
+  .big{background:var(--ink);color:#fff;border-radius:var(--r);padding:36px 36px 32px;margin:0 0 56px}
+  .big h2{font-size:34px;max-width:20ch;margin-bottom:16px}
+  .big p{max-width:58ch;margin:0 0 14px;color:#E4EAE6}
+  .big p:last-child{margin-bottom:0}
+  .big strong{color:#fff}
+  .tag{display:inline-block;font-size:14px;font-weight:700;border-radius:999px;padding:3px 12px;margin-bottom:14px}
+  .tag.fix{background:var(--fix-bg);color:var(--fix)}
+  .tag.good{background:var(--good-bg);color:var(--good)}
+  .big .tag{background:#fff;color:var(--fix)}
+  .item{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px 30px;margin:0 0 16px}
+  .item h3{font-size:22px;line-height:1.25;margin:0 0 8px}
+  .item p{margin:0 0 10px;max-width:62ch}
+  .item p:last-child{margin-bottom:0}
+  .item .how{color:var(--good);font-weight:500}
+  .goods{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 56px}
+  .goods .item{margin:0}
+  .goods h3{font-size:19px}
+  .goods p{font-size:16px;color:var(--soft)}
+  section{margin:0 0 56px}
+  .next{border-top:2px solid var(--ink);padding-top:28px}
+  .next p{max-width:60ch}
+  footer{border-top:1px solid var(--line);padding:24px 0 48px;font-size:15px;color:var(--soft)}
+  footer p{margin:0 0 8px;max-width:70ch}
+  @media (max-width:700px){
+    body{font-size:17px}
+    header{padding:40px 0 28px}
+    .score{grid-template-columns:1fr;gap:10px;padding:24px}
+    .big{padding:28px 24px}
+    .item{padding:22px 22px}
+    .goods{grid-template-columns:1fr}
+  }
+  .pod{height:13px;width:auto;vertical-align:-1px;margin-right:9px}
+  .by{display:inline-flex;align-items:center}
+  footer .pod{height:15px;color:var(--ink)}
+  footer .by{display:inline}
+  .btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-weight:700;border-radius:var(--r);padding:13px 22px;margin-top:6px}
+  .btn:hover{background:#2B3A32}
+  .bar a{text-decoration:none}
+  .bar a:hover{text-decoration:underline}
+  .ai{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:32px 32px 24px}
+  .airows{display:grid;gap:0;margin:0 0 18px}
+  .airow{display:grid;grid-template-columns:92px 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--line)}
+  .airow .tag{justify-self:start;align-self:start;margin:2px 0 0;line-height:1.5}
+  .airow h3{font-size:18px;margin:0 0 4px}
+  .airow p{margin:0;font-size:16px;color:var(--soft);max-width:60ch}
+  .aisub{font-size:15px;color:var(--soft);max-width:62ch;margin:0 0 10px}
+  @media (max-width:700px){.ai{padding:24px 20px 16px}.airow{grid-template-columns:1fr;gap:6px}}
+  @media (min-width:701px){.goods.two{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="wrap"><a class="by" href="index.html"><svg class="pod" viewBox="0 0 487.5 208.5" role="img" aria-label="Pete Owen Design logo"><path fill="currentColor" d="M487.5,10.6h-41.2v15.5c-15.3-10.6-33.9-16.8-53.8-16.8-30.1,0-57,14.1-74.4,36-17.4-21.9-44.3-36-74.4-36s-57,14.1-74.4,36c-17.4-21.9-44.3-36-74.4-36C44.8,9.4,3.8,48,0,96.9h-.3v100.3h41.2v-14.5c15.3,10.6,33.9,16.8,53.8,16.8,30.1,0,57-14.1,74.4-36,17.4,21.9,44.3,36,74.4,36s57-14.1,74.4-36c17.4,21.9,44.3,36,74.4,36,52.4,0,95.1-42.6,95.1-95.1s0-1.3,0-1.9h0V10.6h0ZM94.6,158.2c-29.7,0-53.8-24.2-53.8-53.8s24.2-53.8,53.8-53.8,53.8,24.2,53.8,53.8-24.2,53.8-53.8,53.8ZM243.5,158.2c-29.7,0-53.8-24.2-53.8-53.8s24.2-53.8,53.8-53.8,53.8,24.2,53.8,53.8-24.2,53.8-53.8,53.8ZM392.4,158.2c-29.7,0-53.8-24.2-53.8-53.8s24.2-53.8,53.8-53.8,53.8,24.2,53.8,53.8-24.2,53.8-53.8,53.8Z"/></svg>Prepared for you by Pete Owen Design</a><span>Website check, 23 November 2026</span></div></div>
+
+<div class="wrap">
+
+<header>
+  <h1>Can people find The Playbarn online?</h1>
+  <p class="lede">We looked at your website the way Google and a first-time visitor do. Here is what we found, in plain English, with no jargon.</p>
+</header>
+
+<div class="score">
+  <b>7<span> of 10</span></b>
+  <p><strong>Your site passes 7 of the 10 basic checks.</strong> Google can find you, and much of the groundwork is done. Three gaps affect how you look in search results, and there is one thing hidden in the page that we would fix first.</p>
+</div>
+
+<div class="big">
+  <span class="tag">Worth fixing first</span>
+  <h2>Your home page contains a hidden link to a gambling website.</h2>
+  <p>Tucked into the code just under your main heading, and moved off the edge of the screen so visitors never see it, is <strong>a link to an online casino site</strong>. You almost certainly did not put it there.</p>
+  <p>Hidden links like this are usually added by someone who has got into a website without permission, to borrow its good name with Google. Search engines can mark a site down for it, and it does not belong on a family business's page.</p>
+  <p>It is worth asking whoever looks after your website to remove it, update the site and change its passwords. We have not touched anything on your site.</p>
+</div>
+
+<section>
+  <h2>Three smaller things to fix</h2>
+  <p class="sub">All three are quick to put right.</p>
+
+  <div class="item">
+    <span class="tag fix">To fix</span>
+    <h3>Your search description is broken</h3>
+    <p>The two lines Google may show under your name read "a fun indoor soft play centre for.", with a word missing, and the page carries a second description left over from a template: "Junior HTML Example 5".</p>
+    <p class="how">A new site would have one clear description: soft play, parties and toddler classes at Blakemere Village, with today's opening times a tap away.</p>
+  </div>
+
+  <div class="item">
+    <span class="tag fix">To fix</span>
+    <h3>Shared links show no photograph</h3>
+    <p>When a parent shares your site in a group chat, no picture goes with it, and the description is just your name.</p>
+    <p class="how">A new site would attach a bright photograph of the play frame and one clear line to every share.</p>
+  </div>
+
+  <div class="item">
+    <span class="tag fix">To fix</span>
+    <h3>Google is not handed your details</h3>
+    <p>Your site gives Google a fact sheet about the website, but not about the business: no opening hours, prices, address or phone number in it.</p>
+    <p class="how">A new site would include those details, so your hours show up directly in search.</p>
+  </div>
+</section>
+
+<section>
+  <h2>What is already working</h2>
+  <p class="sub">Seven things your current site gets right.</p>
+  <div class="goods">
+    <div class="item"><span class="tag good">Working</span><h3>Search engines are welcome</h3><p>Nothing on the site stops Google from listing it.</p></div>
+    <div class="item"><span class="tag good">Working</span><h3>A clear page title</h3><p>It says soft play in Northwich, parties and toddler activities.</p></div>
+    <div class="item"><span class="tag good">Working</span><h3>A main heading that says what you are</h3><p>The page opens with "The Playbarn Soft Play Centre, Northwich, Cheshire".</p></div>
+    <div class="item"><span class="tag good">Working</span><h3>Pictures are described</h3><p>Most of your pictures carry a written description.</p></div>
+    <div class="item"><span class="tag good">Working</span><h3>Your own address</h3><p>The site lives at your own name, with a map of its pages for search engines.</p></div>
+    <div class="item"><span class="tag good">Working</span><h3>Secure</h3><p>Your site runs over a secure connection and answers in under a second.</p></div>
+    <div class="item"><span class="tag good">Working</span><h3>Set up for phones</h3><p>The page is told to fit a phone screen.</p></div>
+    </div>
+</section>
+
+
+<section class="ai">
+  <h2>Can AI assistants find you?</h2>
+  <p class="sub">More people now ask ChatGPT, Claude or Google's AI answers instead of searching. These tools read your website too. We checked four things they rely on. <strong>Your site passes 3 of 4.</strong></p>
+  <div class="airows">
+    <div class="airow ok"><span class="tag good">Working</span><div><h3>AI assistants are allowed in</h3><p>Nothing on your site turns them away.</p></div></div>
+    <div class="airow ok"><span class="tag good">Working</span><div><h3>The words can be read without running the page</h3><p>Your words are there in the page itself, so AI tools can read them.</p></div></div>
+    <div class="airow ok"><span class="tag good">Working</span><div><h3>Your phone number and address are written out</h3><p>Your phone number and postcode are written on your home page.</p></div></div>
+    <div class="airow no"><span class="tag fix">To fix</span><div><h3>A summary file for AI tools</h3><p>Your site has one, made automatically by Yoast, but it repeats the broken description: "a fun indoor soft play centre for." It needs one honest sentence about what you offer, your hours and prices.</p></div></div>
+  </div>
+  <p class="aisub">Fixing the description once would fix it in your search listing and in this summary file at the same time.</p>
+  <p class="aisub">Nobody can make an AI recommend a business, and anyone who offers to is selling nothing. What a website can do is let these tools reach it, read it and get your facts right.</p>
+</section>
+
+<section class="next">
+  <h2>What we would do</h2>
+  <p>Once the hidden link is dealt with, the fixes above are quick. A new site would also put today's opening times, the prices and a Book button in the first screen on a phone, where parents look first.</p>
+  <p>We have sketched some ideas for what that site could look like.</p>
+  <p><a class="btn" href="index.html#designs">See the design ideas</a></p>
+</section>
+
+</div>
+
+<footer><div class="wrap">
+  <p><span class="by"><svg class="pod" viewBox="0 0 487.5 208.5" role="img" aria-label="Pete Owen Design logo"><path fill="currentColor" d="M487.5,10.6h-41.2v15.5c-15.3-10.6-33.9-16.8-53.8-16.8-30.1,0-57,14.1-74.4,36-17.4-21.9-44.3-36-74.4-36s-57,14.1-74.4,36c-17.4-21.9-44.3-36-74.4-36C44.8,9.4,3.8,48,0,96.9h-.3v100.3h41.2v-14.5c15.3,10.6,33.9,16.8,53.8,16.8,30.1,0,57-14.1,74.4-36,17.4,21.9,44.3,36,74.4,36s57-14.1,74.4-36c17.4,21.9,44.3,36,74.4,36,52.4,0,95.1-42.6,95.1-95.1s0-1.3,0-1.9h0V10.6h0ZM94.6,158.2c-29.7,0-53.8-24.2-53.8-53.8s24.2-53.8,53.8-53.8,53.8,24.2,53.8,53.8-24.2,53.8-53.8,53.8ZM243.5,158.2c-29.7,0-53.8-24.2-53.8-53.8s24.2-53.8,53.8-53.8,53.8,24.2,53.8,53.8-24.2,53.8-53.8,53.8ZM392.4,158.2c-29.7,0-53.8-24.2-53.8-53.8s24.2-53.8,53.8-53.8,53.8,24.2,53.8,53.8-24.2,53.8-53.8,53.8Z"/></svg>Prepared by Pete Owen Design</span> from what your website shows publicly. Nothing was changed on your site and no login was used.</p>
+  <p>How we checked: we loaded your home page as a search engine would and read what came back, on 23 November 2026. We checked the home page only. We could not see your website's settings, or Google's own records for your site.</p>
+</div></footer>
+
+</body>
+</html>

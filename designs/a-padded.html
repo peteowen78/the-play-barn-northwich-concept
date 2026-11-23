@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>The Playbarn: A, Padded (direction) (concept)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--red:#E5392B;--blue:#1F5BD1;--green:#23A548;--yellow:#FFC22E;--purple:#6A2BC2;--ink:#22113F;--cream:#FFF8EE;--mat:#F2E6D6}
+*{box-sizing:border-box}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 1.0625rem/1.55 Nunito,system-ui,sans-serif}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:Sniglet,Nunito,sans-serif;font-weight:800;line-height:1;margin:0;letter-spacing:-.01em}
+/* padded vinyl: rounded block, soft inner shading, stitched seam */
+.pad{position:relative;border-radius:30px;box-shadow:inset 0 -10px 0 rgba(0,0,0,.14),inset 0 8px 0 rgba(255,255,255,.22),0 14px 0 -4px rgba(34,17,63,.12)}
+.pad::after{content:"";position:absolute;inset:9px;border-radius:22px;border:2px dashed rgba(255,255,255,.55);pointer-events:none}
+.pad.light::after{border-color:rgba(34,17,63,.18)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:800 1.05rem/1 Nunito,sans-serif;text-decoration:none;padding:16px 22px;border-radius:999px;box-shadow:inset 0 -5px 0 rgba(0,0,0,.18);min-height:52px}
+.btn.y{background:var(--yellow);color:var(--ink)}
+.btn.w{background:#fff;color:var(--purple)}
+.btn.p{background:var(--purple);color:#fff}
+/* header */
+header{padding:16px 0}
+.hd{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo b{font:800 1.6rem/0.9 Sniglet,sans-serif;color:var(--purple)}
+.logo small{display:block;font:800 .7rem/1 Nunito;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);opacity:.7;margin-top:4px}
+nav{display:flex;gap:22px;font-weight:800}
+nav a{text-decoration:none}
+nav a:hover{color:var(--purple)}
+.hd .btn{padding:12px 18px;min-height:46px}
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:40px;align-items:center;padding:20px 0 56px}
+.kick{display:inline-block;font:800 .85rem/1 Nunito;letter-spacing:.12em;text-transform:uppercase;background:var(--green);color:#fff;padding:9px 14px;border-radius:999px;margin-bottom:18px}
+.hero h1{font-size:clamp(3rem,6.6vw,5.8rem);color:var(--ink)}
+.hero h1 span{color:var(--red)}
+.hero h1 em{font-style:normal;color:var(--blue)}
+.hero p.lede{font-size:1.2rem;max-width:34ch;margin:18px 0 0}
+.stack{position:relative;aspect-ratio:1/0.92}
+.stack .ph{position:absolute;overflow:hidden;border-radius:34px;border:10px solid #fff;box-shadow:0 18px 0 -6px rgba(34,17,63,.14)}
+.stack .ph img{width:100%;height:100%;object-fit:cover}
+.ph.one{left:0;top:0;width:72%;height:80%;transform:rotate(-2deg)}
+.ph.two{right:0;bottom:0;width:46%;height:52%;transform:rotate(3deg)}
+.cube{position:absolute;width:74px;height:74px;border-radius:18px}
+.cube.c1{background:var(--yellow);right:8%;top:6%;transform:rotate(12deg)}
+.cube.c2{background:var(--blue);left:6%;bottom:2%;width:56px;height:56px;border-radius:50%}
+/* today */
+.today{background:var(--purple);color:#fff;padding:30px 32px 34px;display:grid;grid-template-columns:1.1fr 1fr auto;gap:28px;align-items:center;margin-top:-26px}
+.today .lab{font:800 .8rem/1 Nunito;letter-spacing:.14em;text-transform:uppercase;opacity:.8}
+.today .hrs{font:800 clamp(2rem,3.6vw,2.8rem)/1 Nunito;letter-spacing:-.02em;margin:8px 0 6px}
+.today .note{opacity:.9;font-size:.98rem;margin:0}
+.prices{display:grid;grid-template-columns:repeat(3,auto);gap:10px 18px;align-items:end}
+.prices div{text-align:left}
+.prices b{display:block;font:800 2rem/1 Nunito;letter-spacing:-.02em}
+.prices span{font-size:.9rem;opacity:.9}
+.today .acts{display:flex;flex-direction:column;gap:10px;position:relative;z-index:1}
+.today .on{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.today .on li{background:rgba(255,255,255,.14);border-radius:999px;padding:7px 14px;font-weight:700;font-size:.95rem}
+/* sections */
+section{padding:72px 0}
+.sec-h{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:28px;flex-wrap:wrap}
+.sec-h h2{font-size:clamp(2.2rem,4.4vw,3.6rem)}
+.sec-h p{max-width:46ch;margin:0}
+.zones{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.zone{color:#fff;padding:0 0 26px;overflow:hidden}
+.zone img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:30px 30px 0 0}
+.zone h3{font-size:1.9rem;padding:20px 26px 8px}
+.zone p{margin:0;padding:0 26px}
+.zone.r{background:var(--red)}.zone.b{background:var(--blue)}.zone.g{background:var(--green)}
+/* parties */
+.parties{background:var(--mat)}
+.pk{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;padding:30px 28px 32px}
+.card .tag{display:inline-block;font:800 .78rem/1 Nunito;letter-spacing:.1em;text-transform:uppercase;padding:7px 12px;border-radius:999px;color:#fff}
+.card h3{font-size:2rem;margin:14px 0 8px}
+.card .pr{font:800 3rem/1 Nunito;letter-spacing:-.03em;color:var(--purple);margin:12px 0 4px}
+.card .pr small{font:700 1rem Nunito;color:var(--ink)}
+.card ul{margin:14px 0 0;padding-left:20px}
+.card li{margin:4px 0}
+.inc{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;margin-top:26px;align-items:stretch}
+.inc .pad{background:var(--yellow);padding:30px 32px}
+.inc h3{font-size:1.8rem;margin-bottom:10px}
+.inc ul{columns:2;margin:0;padding-left:20px}
+.inc .phw{border-radius:30px;overflow:hidden;min-height:260px}
+.inc .phw img{width:100%;height:100%;object-fit:cover}
+/* week */
+.week{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.day{background:#fff;padding:20px 18px 22px;border-radius:24px;box-shadow:inset 0 -6px 0 rgba(34,17,63,.08)}
+.day h3{font-size:1.5rem;margin-bottom:10px;color:var(--purple)}
+.day p{margin:0 0 10px;font-size:.95rem}
+.day p b{display:block}
+/* cafe */
+.cafe{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+.cafe .ph{border-radius:34px;overflow:hidden;border:10px solid #fff;transform:rotate(-1.5deg);box-shadow:0 18px 0 -6px rgba(34,17,63,.14)}
+.cafe h2{font-size:clamp(2.2rem,4.4vw,3.6rem);margin-bottom:14px}
+.menu{display:grid;grid-template-columns:1fr auto;gap:6px 24px;max-width:420px;margin:18px 0 0;padding:0}
+.menu dt{border-bottom:2px dotted rgba(34,17,63,.25)}
+.menu dd{margin:0;font-weight:800}
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.rev{padding:28px 28px 30px;color:#fff;margin:0}
+.rev p{font:400 1.25rem/1.35 Sniglet;margin:0 0 14px}
+.rev cite{font-style:normal;font-weight:800;opacity:.9}
+.rev.p{background:var(--purple)}.rev.r{background:var(--red)}.rev.b{background:var(--blue)}
+/* footer */
+footer{background:var(--ink);color:#fff;padding:56px 0 40px;margin-top:20px}
+.ft{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:30px}
+footer h3{font-size:1.6rem;margin-bottom:10px;color:var(--yellow)}
+footer p{margin:0 0 8px}
+.small{font-size:.85rem;opacity:.75;margin-top:36px;border-top:1px solid rgba(255,255,255,.2);padding-top:18px}
+@media (max-width:1000px){
+  nav{display:none}
+  .hero{grid-template-columns:1fr;gap:22px}
+  .today{grid-template-columns:1fr;gap:18px;margin-top:0}
+  .zones,.pk,.revs{grid-template-columns:1fr}
+  .week{grid-template-columns:1fr 1fr}
+  .cafe,.inc,.ft{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  header{padding:12px 0}
+  .logo b{font-size:1.3rem}
+  .hero{padding:4px 0 22px;gap:14px}
+  .kick{display:none}
+  .hero h1{font-size:2.65rem}
+  .hero p.lede{display:none}
+  .stack{aspect-ratio:1/0.62}
+  .ph.one{width:70%;height:96%;border-width:6px;border-radius:24px}
+  .ph.two{width:44%;height:66%;border-width:6px;border-radius:22px}
+  .cube.c1{width:44px;height:44px;right:2%;top:0}
+  .cube.c2{display:none}
+  .today{padding:22px 20px 24px}
+  .prices{grid-template-columns:repeat(3,auto);gap:6px 14px}
+  .prices b{font-size:1.6rem}
+  .prices span{font-size:.8rem;line-height:1.25;display:block;margin-top:4px}
+  .today .acts .btn{width:100%}
+  section{padding:52px 0}
+  .week{grid-template-columns:1fr}
+  .inc ul{columns:1}
+  .card .pr{font-size:2.5rem}
+}
+</style>
+</head>
+<body>
+<div style="background:#17201B;color:#fff;font:500 14px/1.4 system-ui,sans-serif;padding:9px 20px;position:relative;display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;z-index:2147483000"><span style="display:inline-flex;align-items:center;gap:8px"><svg style="height:12px;width:auto;color:#fff" viewBox="0 0 487.5 208.5" role="img" aria-label="Pete Owen Design logo"><path fill="currentColor" d="M487.5,10.6h-41.2v15.5c-15.3-10.6-33.9-16.8-53.8-16.8-30.1,0-57,14.1-74.4,36-17.4-21.9-44.3-36-74.4-36s-57,14.1-74.4,36c-17.4-21.9-44.3-36-74.4-36C44.8,9.4,3.8,48,0,96.9h-.3v100.3h41.2v-14.5c15.3,10.6,33.9,16.8,53.8,16.8,30.1,0,57-14.1,74.4-36,17.4,21.9,44.3,36,74.4,36s57-14.1,74.4-36c17.4,21.9,44.3,36,74.4,36,52.4,0,95.1-42.6,95.1-95.1s0-1.3,0-1.9h0V10.6h0ZM94.6,158.2c-29.7,0-53.8-24.2-53.8-53.8s24.2-53.8,53.8-53.8,53.8,24.2,53.8,53.8-24.2,53.8-53.8,53.8ZM243.5,158.2c-29.7,0-53.8-24.2-53.8-53.8s24.2-53.8,53.8-53.8,53.8,24.2,53.8,53.8-24.2,53.8-53.8,53.8ZM392.4,158.2c-29.7,0-53.8-24.2-53.8-53.8s24.2-53.8,53.8-53.8,53.8,24.2,53.8,53.8-24.2,53.8-53.8,53.8Z"/></svg> Design idea by Pete Owen Design. Not the live The Playbarn website.</span><a href="../index.html" style="color:#fff;font-weight:700">Back to the start</a></div>
+<header>
+  <div class="wrap hd">
+    <a class="logo" href="#" aria-label="The Playbarn home">
+      <svg width="54" height="54" viewBox="0 0 54 54" aria-hidden="true"><rect x="2" y="2" width="50" height="50" rx="14" fill="#6A2BC2"/><circle cx="16" cy="17" r="7" fill="#FFC22E"/><circle cx="38" cy="17" r="7" fill="#FFC22E"/><circle cx="27" cy="29" r="15" fill="#FFC22E"/><ellipse cx="27" cy="35" rx="7" ry="5" fill="#FFF1C9"/><circle cx="21.5" cy="26" r="2.2" fill="#22113F"/><circle cx="32.5" cy="26" r="2.2" fill="#22113F"/><circle cx="27" cy="33" r="2.4" fill="#22113F"/><rect x="6" y="6" width="42" height="42" rx="10" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="1.5" stroke-dasharray="3 3"/></svg>
+      <span><b>The Playbarn</b><small>Soft play since 1997</small></span>
+    </a>
+    <nav><a href="#play">Play</a><a href="#parties">Parties</a><a href="#week">This week</a><a href="#cafe">Café</a><a href="#visit">Find us</a></nav>
+    <a class="btn p" href="https://theplaybarnnorthwich.co.uk/book-now/">Book</a>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+  <div class="hero">
+    <div>
+      <span class="kick">Blakemere Village, Northwich</span>
+      <h1>They <span>climb.</span><br>You <em>flop.</em></h1>
+      <p class="lede">A small, friendly soft play with a big frame, a baby and toddler area, a party disco and a café with comfy sofas. Grown ups get in free.</p>
+    </div>
+    <div class="stack" aria-label="Photos of the Playbarn">
+      <div class="ph one"><img src="https://theplaybarnnorthwich.co.uk/wp-content/uploads/2021/06/29-76-KJG03796.jpg" alt="The soft play floor with padded blocks in red, green and yellow"></div>
+      <div class="ph two"><img src="https://theplaybarnnorthwich.co.uk/wp-content/uploads/2021/06/27-71-KJG03787.jpg" alt="The big play frame with its swings and slides"></div>
+      <span class="cube c1 pad"></span><span class="cube c2"></span>
+    </div>
+  </div>
+
+  <div class="today pad" id="today">
+    <div>
+      <div class="lab" data-day>Open today</div>
+      <div class="hrs" data-hours>9am to 5pm</div>
+      <p class="note">Mon to Fri 9am to 5pm. Sat and Sun 10am to 5pm. Play sessions last 1 hour 30 minutes.</p>
+    </div>
+    <div class="prices">
+      <div><b>£5.75</b><span>18 months to 11 years</span></div>
+      <div><b>£2.75</b><span>under 18 months</span></div>
+      <div><b>Free</b><span>grown ups</span></div>
+    </div>
+    <div class="acts">
+      <a class="btn y" href="https://theplaybarnnorthwich.co.uk/book-now/">Book a play session</a>
+      <a class="btn w" href="#parties">Book a party</a>
+    </div>
+    <ul class="on" data-on aria-label="On today"></ul>
+  </div>
+</div>
+
+<section id="play">
+  <div class="wrap">
+    <div class="sec-h"><h2>Three places to play</h2><p>One frame for big climbers, one corner for little ones, and a sofa for you.</p></div>
+    <div class="zones">
+      <article class="zone r pad"><img src="https://theplaybarnnorthwich.co.uk/wp-content/uploads/2021/06/28-72-KJG03788.jpg" alt="Inside the big play frame" loading="lazy"><h3>The big frame</h3><p>Climbing wall, monkey bars, infinity mirror, rickety rope bridges, balance beams, lookout holes and the super wide slide.</p></article>
+      <article class="zone b pad"><img src="https://theplaybarnnorthwich.co.uk/wp-content/uploads/2021/06/34-100-KJG04047.jpg" alt="Soft padded shapes in the under 3s area" loading="lazy"><h3>Under 3s</h3><p>A sensory area, a smaller slide, a ball pool, a swing seat and happy hoppers. Soft bricks and toys for crawlers.</p></article>
+      <article class="zone g pad"><img src="https://theplaybarnnorthwich.co.uk/wp-content/uploads/2021/06/43-121-KJG04162.jpg" alt="Hot chocolate in the café" loading="lazy"><h3>The café</h3><p>Freshly ground coffee, cakes and snacks, free wifi and comfy sofas. No charge for adults, so bring a friend.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="parties" id="parties">
+  <div class="wrap">
+    <div class="sec-h"><h2>Party time</h2><p>Every party lasts 1 hour 45 minutes, for up to 10 children. Extra children £9.50 each.</p></div>
+    <div class="pk">
+      <article class="card pad light"><span class="tag" style="background:var(--green)">Weekends</span><h3>Playbarn Party</h3><p>Your own party area while the Playbarn stays open. Seats up to 15 grown ups.</p><div class="pr">£125</div><ul><li>Sat and Sun at 10am, 12pm or 2pm</li></ul></article>
+      <article class="card pad light"><span class="tag" style="background:var(--blue)">Best value private hire</span><h3>Playbarn Plus</h3><p>The whole Playbarn is yours for the last 45 minutes.</p><div class="pr">£125 <small>Mon to Fri 4pm</small></div><ul><li>£150 at weekends, 4pm</li></ul></article>
+      <article class="card pad light"><span class="tag" style="background:var(--red)">All yours</span><h3>Exclusive</h3><p>Closed to the public. Just your guests, the whole time.</p><div class="pr">£150 <small>Mon to Fri</small></div><ul><li>£175 Sat and Sun 5pm</li><li>£250 Sat and Sun 10am</li></ul></article>
+    </div>
+    <div class="inc">
+      <div class="pad light" style="background:var(--yellow)">
+        <h3>Every party comes with</h3>
+        <ul><li>A party host of your own</li><li>Play time in the frame</li><li>Unlimited juice and water</li><li>Party tea or pancake brunch</li><li>Cake and Happy Birthday</li><li>Disco with bubbles, snow and lasers</li><li>A crown and glow necklace for the birthday child</li><li>Sweetie cones to take home</li></ul>
+        <p style="margin:18px 0 0;position:relative;z-index:1"><a class="btn p" href="tel:01606301321">Call 01606 301321 to book</a></p>
+      </div>
+      <div class="phw"><img src="https://theplaybarnnorthwich.co.uk/wp-content/uploads/2021/06/14-35-KJG03499.jpg" alt="A party table with a Playbarn birthday card and party food" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section id="week">
+  <div class="wrap">
+    <div class="sec-h"><h2>This week at the Playbarn</h2><p>Classes and offers, written out so you can read them on your phone.</p></div>
+    <div class="week">
+      <div class="day"><h3>Monday</h3><p><b>Happy Hour</b>4 to 5pm. £4.75 over 18 months, £2 up to 17 months.</p><p><b>Eat and Play</b>From 3pm or 3.30pm. £7.50 with a kids meal.</p></div>
+      <div class="day"><h3>Tuesday</h3><p><b>Adventure Babies</b>Adventure Squad, 0 to 4 years, 10am. Little Explorers, 0 to 12 months, 11.15am.</p><p><b>Happy Hour</b>4 to 5pm.</p></div>
+      <div class="day"><h3>Wednesday</h3><p><b>Jo Jingles</b>Family Time, mixed ages, 10.30am.</p><p><b>Happy Hour</b>4 to 5pm.</p></div>
+      <div class="day"><h3>Thursday</h3><p><b>Messy Play</b>10.30 to 11.30am, term time. Included with entry.</p><p><b>Happy Hour</b>4 to 5pm.</p></div>
+      <div class="day"><h3>Friday</h3><p><b>Jo Jingles</b>Jingle Toddlers 9.30am. Jo Jinglers, over 2s, 10.30am.</p><p><b>Eat and Play</b>From 3pm.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="cafe" style="background:var(--mat)">
+  <div class="wrap cafe">
+    <div class="ph"><img src="https://theplaybarnnorthwich.co.uk/wp-content/uploads/2021/06/41-114-KJG04146.jpg" alt="Coffee being poured at the café" loading="lazy"></div>
+    <div>
+      <h2>Because grown ups deserve a treat too</h2>
+      <p>Freshly ground coffee, toasties, jacket potatoes and cake, made while you wait. We cater for most dietary needs.</p>
+      <dl class="menu"><dt>Latte</dt><dd>£3.45</dd><dt>Deluxe hot chocolate</dt><dd>£4.50</dd><dt>Sandwich or toastie</dt><dd>£5.45</dd><dt>Kids grazing plate</dt><dd>£4.25</dd><dt>Babycino</dt><dd>£1.25</dd></dl>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-h"><h2>What families say</h2></div>
+    <div class="revs">
+      <blockquote class="rev p pad"><p>"The equipment for toddlers is great. Lovely staff and very clean."</p><cite>R.S., Google</cite></blockquote>
+      <blockquote class="rev r pad"><p>"The children loved the soft play and bubble disco. Thank you to all the staff for making it completely stress free."</p><cite>Kate, Google</cite></blockquote>
+      <blockquote class="rev b pad"><p>"Great use of a few hours whilst visiting the area. Kids loved it and the adults enjoyed their coffees!"</p><cite>Matthew B, Google</cite></blockquote>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer id="visit">
+  <div class="wrap">
+    <div class="ft">
+      <div><h3>Find us</h3><p>The Playbarn, Blakemere Village, Sandiway, Northwich CW8 2EB</p><p><a href="tel:01606301321">01606 301321</a><br><a href="mailto:hello@theplaybarnnorthwich.co.uk">hello@theplaybarnnorthwich.co.uk</a></p></div>
+      <div><h3>Opening times</h3><p>Monday to Friday 9am to 5pm<br>Saturday and Sunday 10am to 5pm</p></div>
+      <div><h3>Book</h3><p><a href="https://theplaybarnnorthwich.co.uk/book-now/">Play sessions online</a><br><a href="#parties">Parties</a></p></div>
+    </div>
+    <p class="small">Direction A, Padded. Concept by Pete Owen Design, not the live Playbarn website. Prices, times, classes and reviews are taken from the Playbarn's current website (Kate's review is shortened to whole sentences); headlines are proposed copy. Photos are the Playbarn's own, from its website gallery. The bear mark is a placeholder sketch.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var names=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  var open=[[10,"10am"],[9,"9am"],[9,"9am"],[9,"9am"],[9,"9am"],[9,"9am"],[10,"10am"]];
+  var on={0:["Parties at 10am, 12pm and 2pm"],1:["Happy Hour 4 to 5pm","Eat and Play from 3pm"],2:["Adventure Babies 10am","Happy Hour 4 to 5pm","Eat and Play from 3pm"],3:["Jo Jingles 10.30am","Happy Hour 4 to 5pm","Eat and Play from 3pm"],4:["Messy Play 10.30am, term time","Happy Hour 4 to 5pm","Eat and Play from 3pm"],5:["Jo Jingles 9.30am and 10.30am","Eat and Play from 3pm"],6:["Parties at 10am, 12pm and 2pm"]};
+  var d=new Date(),day=d.getDay(),h=d.getHours()+d.getMinutes()/60;
+  var lab=document.querySelector("[data-day]"),hrs=document.querySelector("[data-hours]"),ul=document.querySelector("[data-on]");
+  if(h>=17){day=(day+1)%7;lab.textContent="Closed now. Open tomorrow, "+names[day];}
+  else{lab.textContent=(h>=open[day][0]?"Open now":"Opens today")+", "+names[day];}
+  hrs.textContent=open[day][1]+" to 5pm";
+  on[day].forEach(function(t){var li=document.createElement("li");li.textContent=t;ul.appendChild(li);});
+})();
+</script>
+</body>
+</html>
